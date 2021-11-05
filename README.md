@@ -9,8 +9,12 @@ They are written as Python CLI programs that take user input via `stdin`. They a
 In the following section of this document we specify how well Github Copilot did for every game.
 
 1. Hangman (`hangman.py`): Github Copilot could generate the "main" function `game()` containing the game loop with no issues, but referenced non-existing helper functions. These it could generate without problems once a human started typing their def header.
-2.  Guess-a-number (`number.py`): Github Copilot generated the `main()` function directly. 
+   
+2.  Guess-a-number (`number.py`): Github Copilot generated the `main()` function directly.
+    
 3. Tic-tac-toe (`tic-tac-toe.py`): Github Copilot had some major difficulties with this game. At the beginning we tried the approach that worked with the previous two games, as in letting Copilot know what game we were playing and waiting for it to generate the game loop. This was done rather badly and did not work at all. As such, after about 4 attempts we started writing the game loop ourselves. The function `print_board()` was written entirely by us. The game loop structure was written by us, as in we typed some comments about what to do next and Github Copilot could generate the code. Interestingly it was finally able to pickup the final intention of checking if the game was over and generated the final part directly. Remarkably it could also generate the name and body of the function `map_number_to_coordinates()`, but failed to realize user (string) input had to be converted to `int`.
+   
+4. Quiz (`quiz.py`): Github Copilot could work out a format to store the questions and answers, but failed to generate code within the `main()` function correctly, as in read in the format it had produced, although it started with the right approach. Interestingly it caught a bug in my own code (I had forgotten to add the last batch of buffered answers once the loop terminates). Despite the deserialization issues, it was able to generate the rest of the code (`ask_question()` and `quiz()`) correctly. One thing that is bugging me, however, is that Copilot decieded that the correct answer would always be the first, which is not supposed to be the case. This corroborates my conclusion (see below).
 
 In general, a human was required to write the comment about asking to play again and Github Copilot could generate the code following that.
 

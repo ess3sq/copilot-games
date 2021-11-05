@@ -1,0 +1,15 @@
+Question: What is the jerk?
+The first time derivative of the acceleration.
+The second time derivative of the acceleration.
+The definite time integral of the acceleration.
+The definite path integral of the velocity.
+Question: What is the electric field?
+The negative gradient of the potential.
+The positive gradient of the potential.
+The negative gradient of the energy.
+The positive gradient of the energy.
+Question: What is the Temperature?
+The inverse of the energy derivative of the logarithm of the number of microstates.
+The inverse of the entropy derivative of the logarithm of the number of microstates.
+The energy derivative of the logarithm of the number of microstates.
+The entropy derivative of the logarithm of the number of microstates.
